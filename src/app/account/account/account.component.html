@@ -1,3 +1,11 @@
-<p>
-  account works!
-</p>
+<div class="container-fuild">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <h5>{{ account.name }}</h5>
+            <p>This account is {{ account.status }}</p>
+            <button class="btn btn-default" (click)="onSet('active')"> Set to 'Active'</button>
+            <button class="btn btn-default" (click)="onSet('inactive')"> Set to 'Inactive'</button>
+            <button class="btn btn-default" (click)="onSet('unknown')"> Set to 'Unknown'</button>
+        </div>
+    </div>
+</div>

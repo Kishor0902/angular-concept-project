@@ -3,8 +3,10 @@
         <div class="col-xs-12 col-md-8 col-md-offset">
             <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
             <hr>
-            <app-account *ngFor="let account of accounts let i =index" [account]="acc" [id]="i" [statusChanged]=""> 
-
+            <app-account *ngFor="let acc of accounts; let i = index"
+             [account]="acc" [id]="i" 
+             (statusChanged)="onStatusChanged($event)"
+             > 
             </app-account>
         </div>
     </div>
